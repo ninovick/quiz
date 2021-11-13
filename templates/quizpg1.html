@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8
+        ">
+        <title>Take the Quiz!</title>
+        <style>
+input[type=radio] {
+  display: none;
+}
+
+input:checked + label img {
+  border:2px solid #00f;
+}
+
+</style>
+    </head>
+    <body>
+     
+<form method='post' id="form1" action="{{url_for('quizpg2')}}">
+
+    <input name="image-pick" value="Sour" type="radio" id="one">
+    <label for="one">
+        <img src="https://imgprd19.hobbylobby.com/2/4f/57/24f57e245a879cb2543edd1df4e090bfebf24a45/350Wx350H-1013689-0320.jpg" alt="Green shirt" style="width:128px;height:128px;">
+    </label>
+
+
+    <input name="image-pick" value="Sweet" type="radio" id="two">
+    <label for="two">
+      <img src=https://m.media-amazon.com/images/I/61U2nWo84kL._AC_UL320_.jpg alt="Red shirt" style="width:128px;height:128px;">
+    </label>
+    
+
+    <input name="image-pick" value="Salty" type="radio" id="three">
+    <label for="three">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9BXzALlINCTKg38lZWyvCfU49qSpt7U2Jg&usqp=CAU" alt="Tan shirt"  style="width:128px;height:128px;">
+    </label>
+
+    <input name="image-pick" value="Spicy"  type="radio" id="four">
+    <label for="four">
+        <img src="data:image/jpeg;base64,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" alt="Black shirt" style="width:128px;height:128px;">
+    </label>
+
+    <div><button type="submit">Submit</button></div>
+</form>
+
+
+
+    </body>
+</form>
+</html>
