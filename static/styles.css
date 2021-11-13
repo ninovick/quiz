@@ -9,5 +9,13 @@ header {
 
 body {
     background-color: #f3b748;
+    text-align: center;
+    font-size: x-large;
+    vertical-align: middle;
+    padding: 14px 16px; 
 }
 
+a {
+    padding: 14px 16px;
+    vertical-align: middle;
+}
