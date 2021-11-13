@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
-
+from helpers import favorite, delist
 
 app: Flask = Flask(__name__)
 
 flavor_dict: dict[str, int] = {"Sweet": 0, "Sour": 0, "Spicy": 0, "Salty": 0}
+fav_flavs: str = ""
 
 user_number: int = 0
 
@@ -41,11 +42,18 @@ def quizpg3():
 @app.route('/quizpg4', methods=["GET", "POST"])
 def quizpg4():
     if request.method == "POST":
-        global sweet, sour, spicy, salty  
+        global sweet, sour, spicy, salty, fav_flavs 
         flavor = (request.form["image-pick"])
         flavor_dict[flavor] += 1
 
+        fav = favorite(flavor_dict)
+        fav_flavs = delist(fav)
     return render_template("quizpg4.html")
+
+@app.route('/results',  methods=["GET", "POST"])
+def results():
+    global fav_flavs
+    return render_template("results.html", fav_flavs=fav_flavs)
 
 if __name__ == '__main__':
     app.run(debug=True)

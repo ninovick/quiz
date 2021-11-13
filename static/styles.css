@@ -41,3 +41,11 @@ button {
     height: 134px;  
     width: 104px;
 }
+h1 { 
+    color: #b90d77;
+    text-align: center; 
+    font-size: xx-large;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    background: #dde976;
+}
