@@ -4,6 +4,7 @@
         <meta charset="UTF-8
         ">
         <title>Take the Quiz!</title>
+        <link rel='stylesheet' href='/static/styles.css' />
         <style>
 input[type=radio] {
   display: none;
@@ -16,7 +17,7 @@ input:checked + label img {
 </style>
     </head>
     <body>
-     
+<p> Choose a hat</p>
 <form method='post' id="form1" action="{{url_for('results')}}">
 
     <input name="image-pick" value="Salty" type="radio" id="one">
