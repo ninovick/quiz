@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8
+        ">
+        <title>Take the Quiz!</title>
+        <style>
+input[type=radio] {
+  display: none;
+}
+
+input:checked + label img {
+  border:2px solid #00f;
+}
+
+</style>
+    </head>
+    <body>
+     
+<form method='post' id="form1" action="{{url_for('results')}}">
+
+    <input name="image-pick" value="Salty" type="radio" id="one">
+    <label for="one">
+        <img src="https://partycity6.scene7.com/is/image/PartyCity/_pdp_sq_?$_500x500_$&$product=PartyCity/691727" alt="Red baseball cap" style="width:128px;height:128px;">
+    </label>
+
+
+    <input name="image-pick" value="Spicy" type="radio" id="two">
+    <label for="two">
+      <img src="https://m.media-amazon.com/images/I/61BBPX8VzYL._AC_UX569_.jpg" alt="Cowboy hat" style="width:128px;height:128px;">
+    </label>
+    
+
+    <input name="image-pick" value="Sweet" type="radio" id="three">
+    <label for="three">
+        <img src="https://www.craftoutlet.com/media/catalog/product/cache/1/image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/i/m/image_35386.jpg" alt="Witch hat"  style="width:128px;height:128px;">
+    </label>
+
+    <input name="image-pick" value="Sour"  type="radio" id="four">
+    <label for="four">
+        <img src="https://www.froggtoggs.com/images/FTH101_Gray-00.jpg?resizeid=3&resizeh=1600&resizew=1600" alt="Bucket hat" style="width:128px;height:128px;">
+    </label>
+
+    <div><button type="submit">Submit</button></div>
+</form>
+
+
+
+    </body>
+</form>
+</html>

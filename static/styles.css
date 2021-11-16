@@ -1,0 +1,51 @@
+header { 
+    color: #b90d77;
+    text-align: center; 
+    font-size: xx-large;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    background: #dde976;
+}
+
+body {
+    background-color: #f3b748;
+    text-align: center;
+    font-size: x-large;
+    vertical-align: middle;
+    padding: 14px 16px; 
+}
+
+a {
+    padding: 14px 16px;
+    vertical-align: middle;
+}
+
+button {
+    display: inline-block;
+    height: 134px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 104px;
+}
+
+#close-image img {
+    display: block;
+    height: 130px;  
+    width: 100px;
+}
+
+#close-CSS {
+    background-image: url( 'https://imgprd19.hobbylobby.com/2/4f/57/24f57e245a879cb2543edd1df4e090bfebf24a45/350Wx350H-1013689-0320.jpg' );
+    background-size: 100px 130px;
+    height: 134px;  
+    width: 104px;
+}
+h1 { 
+    color: #b90d77;
+    text-align: center; 
+    font-size: xx-large;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    background: #dde976;
+}
