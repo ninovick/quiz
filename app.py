@@ -56,5 +56,6 @@ def results():
     return render_template("results.html", fav_flavs=fav_flavs)
 
 if __name__ == '__main__':
+    main
     flavor_dict: dict[str, int] = {"Sweet": 0, "Sour": 0, "Spicy": 0, "Salty": 0}
     app.run(debug=True)
