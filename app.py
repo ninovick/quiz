@@ -21,31 +21,23 @@ def quizpg2():
     if request.method == "POST":
         global flavor_dict 
         flavor = (request.form["image-pick"])
-        print(f"before add 1: {flavor_dict}") 
         flavor_dict[flavor] += 1
-        print(f"after add 1: {flavor_dict}") 
-    # return render_template("quizpg3.html")
     return render_template("quizpg2.html")
 
 @app.route('/quizpg3', methods=["GET", "POST"])
 def quizpg3():
     if request.method == "POST":
         global flavor_dict
-        print(f"before add 2: {flavor_dict}")  
         flavor = (request.form["image-pick"])
         flavor_dict[flavor] += 1
-        print(f"after add 2: {flavor_dict}")  
-        # return render_template("quizpg4.html")
     return render_template("quizpg3.html")
 
 @app.route('/quizpg4', methods=["GET", "POST"])
 def quizpg4():
     if request.method == "POST":
         global flavor_dict
-        flavor = (request.form["image-pick"])
-        print(f"before add 3: {flavor_dict}")  
+        flavor = (request.form["image-pick"])  
         flavor_dict[flavor] += 1
-        print(f"after add 3: {flavor_dict}")  
     return render_template("quizpg4.html")
 
 @app.route('/results',  methods=["GET", "POST"])
@@ -54,9 +46,7 @@ def results():
     if request.method == "POST":
         global flavor_dict  
         flavor = (request.form["image-pick"])
-        print(f"before add 4: {flavor_dict}") 
         flavor_dict[flavor] += 1
-        print(f"after add 4: {flavor_dict}") 
         fav = favorite(flavor_dict)
         fav_flavs = delist(fav)
     flavor_dict = {"Sweet": 0, "Sour": 0, "Spicy": 0, "Salty": 0}
