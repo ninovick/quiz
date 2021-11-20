@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from helpers import favorite, delist
+from helpers import favorite, delist, User
 
 app: Flask = Flask(__name__)
 
@@ -7,6 +7,7 @@ flavor_dict: dict[str, int] = {"Sweet": 0, "Sour": 0, "Spicy": 0, "Salty": 0}
 fav_flavs: str = ""
 
 user_number: int = 0
+users: list[int] = []
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -42,15 +43,24 @@ def quizpg4():
 
 @app.route('/results',  methods=["GET", "POST"])
 def results():
-    global fav_flavs, flavor_dict
+    global fav_flavs, flavor_dict, user_number, users
     if request.method == "POST":
         global flavor_dict  
         flavor = (request.form["image-pick"])
         flavor_dict[flavor] += 1
         fav = favorite(flavor_dict)
         fav_flavs = delist(fav)
-    flavor_dict = {"Sweet": 0, "Sour": 0, "Spicy": 0, "Salty": 0}
+        user_number += 1
+        new_user: User =User(user_number, fav_flavs)
+        users.append(new_user)
+        flavor_dict = {"Sweet": 0, "Sour": 0, "Spicy": 0, "Salty": 0}
     return render_template("results.html", fav_flavs=fav_flavs)
+
+
+@app.route('/all_results')
+def all_results():
+    return render_template("all_results.html", users=users)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
