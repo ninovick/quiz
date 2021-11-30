@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8
-        ">
+        <meta charset="UTF-8">
         <title>RESULTS!</title>
         <link rel='stylesheet' href='/static/styles.css' />
         <style>
@@ -12,7 +11,19 @@
     <body>
         <h1>You like {{fav_flavs}} foods!!</h1>
         <br>
-        <p>*Small description of personality*</p>
+        <p> {% if "Sweet" in fav_flavs %}
+            Sweet description. 
+        {% endif %} 
+        {% if "Sour" in fav_flavs %}
+            Sour description. 
+        {% endif %}
+        {% if "Salty" in fav_flavs  %}
+            Salty description. 
+        {% endif %}
+        {% if "Spicy" in fav_flavs  %}
+            Spicy description. 
+        {% endif %}
+    </p>
         <a href="/"><p style="text-align:center">Take Quiz Again</p></a>
         
     </body>
