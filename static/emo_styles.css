@@ -1,0 +1,24 @@
+h1 { 
+    color: #1212c1;
+    text-align: center; 
+    font-size: xx-large;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    background: #80807e;
+}
+
+h2 { 
+    color: #c11212;
+    font-size: x-large;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    background: #80807e;
+}
+
+body {
+        background-color: #80807e;
+        text-align: center;
+        font-size: x-large;
+        vertical-align: middle;
+        padding: 14px 16px; 
+    }

@@ -26,3 +26,12 @@ def delist(list: list[str]) -> str:
             result += " and " + list[i]
         i += 1
     return result
+
+
+class User:
+    id: int
+    flav: str
+
+    def __init__(self, id: int, flav: str):
+        self.id = id
+        self.flav = flav
